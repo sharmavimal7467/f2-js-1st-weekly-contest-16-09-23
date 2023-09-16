@@ -14,9 +14,18 @@ function printDeveloper() {
 
 // 2. Add Data
 function addData() {
-  data.splice(2,1,{name:"Viyaan",age:22,profession:"Learner"});
-console.log(data)
-}
+    const newData = {
+      id: data.length + 1,
+      name: prompt("Enter a name:"),
+      age: parseInt(prompt("Enter an age:")),
+      profession: prompt("Enter a profession:"),
+    };
+    data.push(newData);
+    console.log("New data added:", newData);
+  }
+//   data.splice(2,1,{name:"Viyaan",age:22,profession:"Learner"});
+// console.log(data)
+// }
 
 // 3. Remove Admins
 function removeAdmin() {
